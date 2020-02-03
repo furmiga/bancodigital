@@ -31,3 +31,6 @@ Como foi utilizado springsecurity, sera necessário se autenticar para visualiza
 > **Senha:** 123
 
 **Obs:** Para acessar as URIs do actuator não tem necessidade de se autenticar, pois para essas URIs foi dado permissão de livre acesso
+
+## Postman
+Caso os testes sejam feitos utilizando o Postman, foi criado na raiz do projeto uma pasta chamada postman com um arquivo contendo todos os testes da aplicação. Basta importar este arquivo para dentro do postman.

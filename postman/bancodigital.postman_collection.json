@@ -1,0 +1,315 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bancodigital",
+		"_postman_id": "3885f004-a9a6-abdd-2b91-78d1b56b4891",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar tipo de produto financeiro",
+			"request": {
+				"url": "http://localhost:8080/tp-produto-financeiro",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyMw==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"descricao\":\"Conta corrente\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar tipo de produto financeiro",
+			"request": {
+				"url": "http://localhost:8080/tp-produto-financeiro/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar tipo produto financeiro",
+			"request": {
+				"url": "http://localhost:8080/tp-produto-financeiro/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os tipos de produto financeiro",
+			"request": {
+				"url": "http://localhost:8080/tp-produto-financeiro",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar cliente",
+			"request": {
+				"url": "http://localhost:8080/cliente",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"victor\",\n\t\"cpf\":\"787.212.220-02\",\n\t\"email\":\"teste@teste.com\",\n\t\"endereco\":\"teste endereco n 55\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar cliente",
+			"request": {
+				"url": "http://localhost:8080/cliente/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os clientes",
+			"request": {
+				"url": "http://localhost:8080/cliente",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar cliente",
+			"request": {
+				"url": "http://localhost:8080/cliente/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar conta",
+			"request": {
+				"url": "http://localhost:8080/contas",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"numeroConta\": 123,\n  \"senha\": \"3232\",\n  \"cliente\": {\n    \"clienteId\": 1\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar conta",
+			"request": {
+				"url": "http://localhost:8080/contas/123",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas as contas",
+			"request": {
+				"url": "http://localhost:8080/contas",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar conta",
+			"request": {
+				"url": "http://localhost:8080/contas/123",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar produto financeiro",
+			"request": {
+				"url": "http://localhost:8080/produtor-financeiro",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"valor\": 100,\n  \"conta\": {\n    \"numeroConta\": 123\n  },\n  \"tipoProdutoFinanceiro\": {\n    \"tipoProdutoFinanceiroId\": 1\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos produtos financeiros",
+			"request": {
+				"url": "http://localhost:8080/produtor-financeiro",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar produtor financeiro",
+			"request": {
+				"url": "http://localhost:8080/produtor-financeiro/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar produtor financeiro",
+			"request": {
+				"url": "http://localhost:8080/produtor-financeiro/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dmljdG9yOjEyM3Nz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
