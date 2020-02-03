@@ -1,4 +1,4 @@
-# Bacndo digital
+# Banco digital
 
 ## Descrição
 Projeto feito para fins didáticos, afim de demonstrar as iterações básicas em um BD (CRUD)
