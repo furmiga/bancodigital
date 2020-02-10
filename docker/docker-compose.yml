@@ -1,0 +1,29 @@
+version: '3'
+services:
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bancodigital 
+    ports:
+      - "3306:3306"
+    networks:
+      - my_net
+  app:
+    image: app/bancodigital
+    links:
+      - mysqlsrv:mysqlsrv
+    ports:
+      - 8080:8080
+    environment:
+      JDBC_DATABASE_URL: jdbc:mysql://mysqlsrv/bancodigital?createDatabaseIfNotExist=true&useSSL=false
+      JDBC_DATABASE_USERNAME: root
+      JDBC_DATABASE_PASSWORD: root    
+    networks:
+      - my_net
+    depends_on:
+      - mysqlsrv
+    command: sh -c './wait-for mysqlsrv:3306 -- /usr/app/bancodigital/docker-entrypoint.sh'
+networks:
+  my_net:
+    driver: bridge
